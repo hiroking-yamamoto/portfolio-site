@@ -1,0 +1,223 @@
+/*-----------------------
+
+共通
+
+------------------------*/
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top:40px;
+}
+
+.text {
+  font-family: 'sans-serif';
+}
+/*-----------------------
+
+header
+
+------------------------*/
+
+.header {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+}
+
+li {
+  padding: 16px;
+  text-align: center;
+}
+
+li a{
+  color: black;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .h-menu {
+    width: 100%;
+  }
+
+  h1 {
+    padding: 16px 0;
+  }
+
+  ul{
+      padding: 0;
+  }
+  
+  li {
+    width: 50%;
+    border: 1px solid #d8d8d8;
+  }
+}
+
+/*-----------------------
+
+about
+
+------------------------*/
+.about-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+
+}
+
+.about-area-img {
+  width: 50%;
+}
+.about-area-decription {
+  width: 50%;
+  padding: 16px;
+}
+
+.about-area-decription-icon{
+  display: flex;
+  justify-content:space-around;
+  padding-top: 16px;
+}
+
+.about-area-decription-icon a:hover {
+  opacity: 0.6;
+}
+
+.fa-twitter {
+  color:#1DA1F2;
+  font-size: 50px;
+  opacity: 0.8;
+}
+
+.fa-youtube {
+  color:#DA1725;
+  font-size: 50px;
+  opacity: 0.8;
+}
+
+.fa-facebook-f {
+  color: #1877f2;
+  font-size: 50px;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .about-area-img {
+    width: 100%;
+  }
+
+  .about-area-decription {
+    width: 100%;
+  }
+}
+
+/*-----------------------
+
+service
+
+------------------------*/
+
+#Service h3 {
+  height: 2em;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom:40px;
+}
+
+.service-icon {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom:40px;
+}
+
+.text {
+  padding: 16px;
+}
+/*-----------------------
+
+Works
+
+------------------------*/
+
+#Works h3 {
+  text-align: center;
+  font-size: 16px;
+}
+
+#Works img {
+  margin-bottom: 40px;
+  border: 1px solid #d8d8d8;
+}
+
+/*-----------------------
+
+Contact
+
+------------------------*/
+
+.form {
+  width: 400px;
+  margin: 0 auto 40px;
+}
+
+label{
+  display: block;
+}
+
+input {
+  display: block;
+  width: 100%;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+}
+
+.form_content {
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: #535252;
+  color: white;
+  width: 250px;
+  padding: 16px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+/*-----------------------
+
+footer
+
+------------------------*/
+footer {
+  text-align: center;
+}
