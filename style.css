@@ -6,6 +6,8 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color:  #01073F;
+  color: white;
 }
 
 img {
@@ -22,6 +24,7 @@ img {
 .text {
   font-family: 'sans-serif';
 }
+
 /*-----------------------
 
 header
@@ -34,6 +37,7 @@ header
   justify-content:space-between;
   align-items: center;
   padding: 16px 0;
+  z-index: 60;
 }
 
 h1 {
@@ -48,14 +52,45 @@ ul {
   margin: 0;
 }
 
-li {
-  padding: 16px;
+.h-menu a{
   text-align: center;
+  display: block;
+  padding: 16px;
+  color: #aaa;
+  transition: 0.5s;
+  text-decoration: none;
 }
 
-li a{
-  color: black;
-  text-decoration: none;
+.h-menu a:hover{
+  color: #01073F;
+  text-shadow:white 2px 0px 10px, white -2px 0px 10px,
+  white 0px -2px 10px, white -2px 0px 10px,
+  white 2px 2px 10px, white -2px 2px 10px,
+  white 2px -2px 10px, white -2px -2px 10px,
+  white 1px 2px 10px, white -1px 2px 10px,
+  white 1px -2px 10px, white -1px -2px 10px,
+  white 2px 1px 10px, white -2px 1px 10px,
+  white 2px -1px 10px, white -2px -1px 10px,
+  white 1px 1px 10px, white -1px 1px 10px,
+  white 1px -1px 10px, white -1px -1px 10px,
+  /* ここまで10px */
+  white 10px 0px 20px, white -10px 0px 20px,
+  white 0px -10px 20px, white -10px 0px 20px,
+  white 10px 10px 20px, white -10px 10px 20px,
+  white 10px -10px 20px, white -10px -10px 20px,
+  white 5px 10px 20px, white -5px 10px 20px,
+  white 5px -10px 20px, white -5px -10px 20px,
+  white 10px 5px 20px, white -10px 5px 20px,
+  white 10px -5px 20px, white -10px -5px 20px,
+  white 5px 5px 20px, white -5px 5px 20px,
+  white 5px -5px 20px, white -5px -5px 20px;
+}
+
+.line {
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -75,6 +110,10 @@ li a{
     width: 50%;
     border: 1px solid #d8d8d8;
   }
+
+  .line {
+    display: none;
+  }
 }
 
 /*-----------------------
@@ -86,13 +125,18 @@ about
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 40px;
-
+  padding-bottom: 40px;
+  border-bottom: .5px solid white;
 }
 
 .about-area-img {
   width: 50%;
 }
+
+.about-area-img img {
+  border-radius: 20%;
+}
+
 .about-area-decription {
   width: 50%;
   padding: 16px;
@@ -104,26 +148,40 @@ about
   padding-top: 16px;
 }
 
+.about-area-decription-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: .5s;
+}
+
+
+
 .about-area-decription-icon a:hover {
-  opacity: 0.6;
+  box-shadow: 0 0 10px #ddd,
+              0 0 20px #ddd,
+              0 0 40px #ddd,
+              0 0 80px #ddd;
 }
 
 .fa-twitter {
   color:#1DA1F2;
   font-size: 50px;
-  opacity: 0.8;
 }
 
 .fa-youtube {
   color:#DA1725;
   font-size: 50px;
-  opacity: 0.8;
 }
 
 .fa-facebook-f {
   color: #1877f2;
   font-size: 50px;
-  opacity: 0.8;
 }
 
 @media screen and (max-width: 768px) {
@@ -142,6 +200,30 @@ service
 
 ------------------------*/
 
+#Service {
+  border-bottom: .5px solid white;
+}
+
+#Service > .row {
+  position: relative;
+}
+
+#Service > .row > div:after {
+  content: "";
+  position: absolute;
+  display: flex;
+  width: .3px;
+  height: 85%;
+  background-color: white;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#Service > .row > div:last-child:after {
+  display: none;
+}
+
 #Service h3 {
   height: 2em;
   font-size: 24px;
@@ -150,19 +232,62 @@ service
 }
 
 .service-icon {
+  margin: 0 auto 40px ;
+  width: 2em;
+  height: 2em;
+  color:  #01073F; 
   text-align: center;
   font-size: 50px;
-  margin-bottom:40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.text {
+#Service .text {
   padding: 16px;
 }
+
+@media screen and (max-width: 768px) {
+  #Service .text {
+    text-align: center;
+  }
+
+  #Service > .row > div:after ,#Service > .row > div:last-child:after {
+    content: "";
+    position: absolute;
+    display: flex;
+    width: .3px;
+    height: 90%;
+    background-color: white;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+
+  #Service > .row > div:before{
+    content: "";
+    position: absolute;
+    display: flex;
+    width: .3px;
+    height: 90%;
+    background-color: white;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
 /*-----------------------
 
 Works
 
 ------------------------*/
+
+#Works {
+  border-bottom: .5px solid white;
+}
 
 #Works h3 {
   text-align: center;
@@ -172,6 +297,17 @@ Works
 #Works img {
   margin-bottom: 40px;
   border: 1px solid #d8d8d8;
+}
+
+#Works a img{
+  transition: 0.5s;
+}
+
+#Works a img:hover{
+  box-shadow: 0 0 10px #ddd,
+              0 0 20px #ddd,
+              0 0 40px #ddd,
+              0 0 80px #ddd;
 }
 
 /*-----------------------
@@ -204,13 +340,25 @@ textarea {
 }
 
 button {
-  background-color: #535252;
+  background-color: #01073F;
+  border:  1px solid white;
   color: white;
   width: 250px;
   padding: 16px;
   text-align: center;
   margin: 0 auto;
   display: block;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #aaa;
+  border:  1px solid #01073F;
+  color: #01073F;
+  box-shadow: 0 0 10px #ddd,
+  0 0 20px #ddd,
+  0 0 40px #ddd,
+  0 0 80px #ddd;
 }
 
 /*-----------------------
@@ -219,5 +367,7 @@ footer
 
 ------------------------*/
 footer {
+  border-top: .5px solid white;
+  font-family: 'sans-serif';
   text-align: center;
 }
