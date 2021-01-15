@@ -259,10 +259,10 @@ service
     position: absolute;
     display: flex;
     width: .3px;
-    height: 90%;
+    height: 85%;
     background-color: white;
     top: 50%;
-    right: 0;
+    right: 15px;
     transform: translateY(-50%);
   }
 
@@ -271,10 +271,10 @@ service
     position: absolute;
     display: flex;
     width: .3px;
-    height: 90%;
+    height: 85%;
     background-color: white;
     top: 50%;
-    left: 0;
+    left: 15px;
     transform: translateY(-50%);
   }
 }
@@ -359,6 +359,12 @@ button:hover {
   0 0 20px #ddd,
   0 0 40px #ddd,
   0 0 80px #ddd;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    width: 100%;
+  }
 }
 
 /*-----------------------
